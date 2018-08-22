@@ -1,0 +1,46 @@
+\title{Moving Sources \vspace{-0.7cm}}
+\author{Chelsea A. D'Angelo\vspace{-0.8cm}}
+\documentclass[12pt]{article}
+\usepackage{titling}
+\usepackage{amsmath}
+\setlength{\droptitle}{-80pt}
+
+\begin{document}
+\maketitle
+
+Distance formula:
+\begin{equation}\label{eq:distance}
+  d = vt
+\end{equation}
+
+Time-dependent distance from moving source to detector:
+\begin{equation}\label{eq:r_t}
+  r(t) = \sqrt{d_{0}^2 + (vt)^2}
+\end{equation}
+
+Time-dependent flux at detector:
+\begin{equation}\label{eq:flux}
+  \phi(r(t)) = \frac{S}{4 \pi r(t)^2}
+\end{equation}
+
+Total fluence over time of source movement:
+\begin{equation}\label{eq:fluence}
+\begin{gathered}
+  \Phi(t) = \int_0^T \phi(r(t)) dt \\
+  \Phi(t) = \int_0^T \frac{S}{4 \pi r(t)^2} dt = \\
+  \Phi(t) = \int_0^T \frac{S}{4 \pi (d_{0}^2 + (vt)^2)} dt = \\
+  \Phi = \frac{S}{4 \pi v d_0} \arctan {\frac{vT}{d_0}}
+\end{gathered}
+\end{equation}
+
+Total dose over time of source movement:
+\begin{equation}\label{eq:fluence}
+  D = \Phi E \frac{\mu_{en}}{\rho}
+\end{equation}
+
+Total fluence over time of source movement, with decaying source:
+\begin{equation}\label{eq:fluence}
+  \Phi(t) = \int_0^T \frac{S_0 e^{-\lambda t}}{4 \pi (d_{0}^2 + (vt)^2)} dt
+\end{equation}
+
+\end{document}
